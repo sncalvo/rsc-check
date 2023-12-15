@@ -192,10 +192,16 @@ export async function App() {
   )
 }
 
-export default async function App2() {
+// export default async function App2() {
+//   return (
+//     <div className="p-5">
+//       <ComponentWithServerAction />
+//     </div>
+//   )
+// }
+//
+export default function App3() {
   return (
-    <div className="p-5">
-      <ComponentWithServerAction />
-    </div>
-  )
+    <div><QuickToRenderComponent /><Suspense fallback={"Loading..."}><SlowToRenderComponent /></Suspense></div>
+  );
 }
